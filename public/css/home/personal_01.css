@@ -1,0 +1,37 @@
+
+.main_r {
+    float: left;
+    width: 590px
+}
+
+.color4a9 {
+    color: #4a90e3
+}
+
+.framedatabox {
+    padding-top: 15px
+}
+
+.fdata {
+    padding-left: 20px;
+    line-height: 40px;
+    border-bottom: 2px solid #e6e6e6;
+    overflow: hidden
+}
+
+.fdata h3 {
+    font-size: 16px;
+    color: #333
+}
+
+.n-frame {
+    background: #fff;
+    padding: 34px 34px 0;
+    border: 1px solid #e6e6e6;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    min-height: 400px;
+    _height: 400px
+}
