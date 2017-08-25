@@ -68,5 +68,4 @@
     </div>
 </div>
 
-<script src="{{asset('js/member/member.js')}}"></script>
 

@@ -23,12 +23,6 @@
     <!-- load css -->
     @section('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('/plugin/layui/css/layui.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/admin/global.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/admin/font.css') }}">
-    {{--<link rel="stylesheet" type="text/css" href="{{ asset('/css/admin/common.css') }}">--}}
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/admin/personal.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/admin/main.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/admin/show.css') }}">
         @show
 </head>
 <body>
@@ -44,7 +38,7 @@
 @section('js')
     <!-- 加载js文件-->
     <script type="text/javascript" src="{{ asset('/plugin/layui/layui.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('/js/admin/larry.js') }}"></script>
+    <!-- <script type="text/javascript" src="{{ asset('/js/admin/larry.js') }}"></script> -->
 @show
 </body>
 </html>

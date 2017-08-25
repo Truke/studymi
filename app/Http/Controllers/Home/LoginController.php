@@ -28,8 +28,7 @@ class LoginController extends BaseController
             if($email[0]->status == 1 ){
                 return back()->with('error', '你的账号已被锁定, 暂时无法登陆')->withInput();
             }
-//            dd($email[0]->password);
-
+           // dd($email[0]->password);
             if(Hash::check($data['password'], $email[0]->password)){
                 $request->session()->put('user_deta', ['nick_name'=>$email[0]->nick_name, 'phone'=>$email[0]->phone, 'email'=>$email[0]->email, 'id'=>$email[0]->id]);
                 return redirect('/');
@@ -48,8 +47,7 @@ class LoginController extends BaseController
             if($phone[0]->status == 1){
                 return back()->with('error', '你的账号已被锁定, 暂时无法登陆')->withInput();
             }
-
-
+            // dd($phone[0]->password);
             if(Hash::check($data['password'], $phone[0]->password)){
 //                dd($phone);
                 $request->session()->put('user_deta', ['nick_name'=>$phone[0]->nick_name, 'phone'=>$phone[0]->phone, 'email'=>$phone[0]->email, 'id'=>$phone[0]->id]);

@@ -91,11 +91,10 @@
     <script>
 
 
-        layui.use(['form, layer, jquery'], function () {
+        layui.use(['form', 'layer', 'jquery'], function () {
             var $ = layui.jquery,
                 form = layui.form(),
                 layer = layui.layer;
-
 
             form.verify({
                 username: function (value) {

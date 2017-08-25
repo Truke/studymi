@@ -212,7 +212,7 @@ Route::group(['namespace'=>'Home',], function(){
     Route::get('toPay', 'AddCartController@toPay');
 
     Route::get('reg', function () {
-        return view('home/reg_login/reg');
+        return view('home/reg_login/reg2');
 
     });
     Route::post('sms', 'SmsController@sms');
@@ -222,6 +222,7 @@ Route::group(['namespace'=>'Home',], function(){
     });
     Route::post('login', 'LoginController@login');
     Route::get('login/exit', 'LoginController@loginout');
+    Route::post('reg', 'RegisterController@register');
 
     Route::get('user_detail', 'UserDetailController@user_detail')->middleware('ponseral');
     Route::post('mail_code', 'UserDetailController@mailcode');

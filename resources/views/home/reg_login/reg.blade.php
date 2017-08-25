@@ -33,7 +33,7 @@
                 <div class="layui-tab-item layui-show" style="">
                     <div class="shu layui-form">
                         <div class="xiao layui-form">
-                            <form class="layui-form" action="{{url('admin/member')}}" method="post">
+                            <form class="layui-form" action="{{url('register')}}" method="post">
                                 {{csrf_field()}}
                             <input type="text" name="phone" required lay-verify="required|phone|number" placeholder="请输入手机号码"
                                    autocomplete="off" class="layui-input qing" value="{{old('phone')}}">
@@ -261,7 +261,7 @@
                             var email_code = $('input[name=email_code]').val();
                             $('code').remove();
                             $.ajax({
-                                url:"{{url('admin/mail_code')}}",
+                                url:"{{url('/reg')}}",
                                 type:'post',
                                 data:{'_token':"{{csrf_token()}}",'email':email, 'password':pass,'password_confirmation': pass_con, 'code':code, 'email_code':email_code },
                                 success:function (data) {
@@ -269,10 +269,10 @@
                                     switch(data)
                                     {
                                         case 0:
-                                            window.location = "http://www.mi.cn";
+                                            layer.msg('验证码错误');
                                             break;
                                         case 1:
-                                            layer.msg('验证码错误');
+                                            window.location = "/login";
                                             break;
                                         case 2:
                                             layer.msg('邮箱验证码错误');
