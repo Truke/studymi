@@ -212,7 +212,7 @@ Route::group(['namespace'=>'Home',], function(){
     Route::get('toPay', 'AddCartController@toPay');
 
     Route::get('reg', function () {
-        return view('home/reg_login/reg2');
+        return view('home/reg_login/reg');
 
     });
     Route::post('sms', 'SmsController@sms');
